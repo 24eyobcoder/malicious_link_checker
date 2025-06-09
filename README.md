@@ -2,7 +2,7 @@
 #download verified_online.csv 
 
 install depndancies[pip install beautifulsoup4
-,schedule,Time,requests,dnspython]
+,schedule,Time,requests,dnspython,whios]
 
 #stage 2 adding domain intellgence 
      Features to add:
@@ -24,3 +24,5 @@ A command-line based URL analyzer built with Python to detect potentially malici
 - 🧠 Integration-ready with VirusTotal, Google Safe Browsing, and PhishTank APIs
 - 🌐 Detection of insecure forms and use of shortened URLs
 - 📂 Supports batch scanning via text files
+
+
