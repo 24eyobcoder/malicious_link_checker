@@ -11,30 +11,39 @@ def main():
     url=input("Enter a URL: ").strip()
     domain=input("Enter domain like (Google.com)")
 
-    #check weather the link is valid or not
-    if not is_valid_url(url):
-        print("Invalid URL format.")
+    while True:
+        print("Choose an option:")
+        print("1. Check URL validity")
+        print("2. Check URL with AI")
+
+        choice = input("chosee an option (1 or 2): ").strip()
+
+        if choice == '1':
+            #check weather the link is valid or not
+           if not is_valid_url(url):
+                  print("Invalid URL format.")
         
-    #function that check reachablity
-    if check_url_reachablity(url):
-        print(f"The URL {url} is reachable.")
-    else:
-        print(f"The URL {url} is not reachable.")
+             #function that check reachablity
+           if check_url_reachablity(url):
+                print(f"The URL {url} is reachable.")
+           else:
+              print(f"The URL {url} is not reachable.")
     
-     #to check domain info and also to resolve dns issue
-    get_domain_info(url)
-    resolve_dns(domain)
+             #to check domain info and also to resolve dns issue
+              get_domain_info(url)
+              resolve_dns(domain)
+              #to check phishing tank
+              check_phishtank_url(url)
+              #scan content
+              scan_content(url)
+        
+        elif choice == '2':
+            #check url with AI
+            result = check_url_with_chatgpt(url)
+            print("AI Analysis Result:")
+            print(result)
 
-    #to check phishing tank
-    check_phishtank_url(url)
-
-    #scan content
-    scan_content(url)
-
-    #ai checker
-    result = check_url_with_chatgpt(url)
-    print("AI Analysis Result:")
-    print(result)
+   
 
     
 if __name__ == "__main__":
