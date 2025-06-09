@@ -13,7 +13,7 @@ def main():
 
     while True:
         print("Choose an option:")
-        print("1. Check URL validity")
+        print("1. Check URL with Rule Based")
         print("2. Check URL with AI")
         print("3. Exit")
 
