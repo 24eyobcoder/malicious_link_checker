@@ -1,4 +1,8 @@
 #stage 1 is simple logic to check wather the link is reachable and valid format of our url
+#download verified_online.csv 
+
+install depndancies[pip install beautifulsoup4
+,schedule,Time,requests,dnspython]
 
 #stage 2 adding domain intellgence 
      Features to add:

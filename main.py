@@ -5,6 +5,7 @@ from domain_info import resolve_dns
 from domain_info import get_domain_info
 from check_phish_tank import check_phishtank_url
 from scan_content import scan_content
+from ai_checker import check_url_with_chatgpt
 
 def main():
     url=input("Enter a URL: ").strip()
@@ -29,6 +30,11 @@ def main():
 
     #scan content
     scan_content(url)
+
+    #ai checker
+    result = check_url_with_chatgpt(url)
+    print("AI Analysis Result:")
+    print(result)
 
     
 if __name__ == "__main__":
